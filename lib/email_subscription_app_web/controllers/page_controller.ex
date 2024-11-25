@@ -2,8 +2,9 @@ defmodule EmailSubscriptionAppWeb.PageController do
   use EmailSubscriptionAppWeb, :controller
 
   def home(conn, _params) do
-    # The home page is often custom made,
-    # so skip the default app layout.
-    render(conn, :home, layout: false)
+    Appsignal.instrument("very slow request", fn ->
+      :timer.sleep(5000)
+      render(conn, :home, layout: false)
+    end)
   end
 end
