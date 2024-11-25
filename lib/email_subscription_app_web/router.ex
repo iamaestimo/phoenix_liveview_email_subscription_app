@@ -17,9 +17,9 @@ defmodule EmailSubscriptionAppWeb.Router do
   scope "/", EmailSubscriptionAppWeb do
     pipe_through :browser
 
-    live "/", PageLive, :index
+    # live "/", PageLive, :index
 
-    # get "/", PageController, :home
+    get "/", PageController, :home
   end
 
   # Other scopes may use custom stacks.
