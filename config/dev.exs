@@ -2,8 +2,8 @@ import Config
 
 # Configure your database
 config :email_subscription_app, EmailSubscriptionApp.Repo,
-  username: "postgres",
-  password: "wCfCp7an3R4vxnQJ",
+  username: System.get_env("POSTGRES_USER") || "postgres",
+  password: System.get_env("POSTGRES_PASSWORD") || "postgres",
   hostname: "localhost",
   database: "email_subscription_app_dev",
   stacktrace: true,

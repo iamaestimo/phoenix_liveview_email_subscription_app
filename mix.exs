@@ -61,7 +61,8 @@ defmodule EmailSubscriptionApp.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:bandit, "~> 1.5"},
       {:oban, "~> 2.17"},
-      {:appsignal, "~> 2.8"}
+      {:appsignal, "~> 2.8"},
+      {:appsignal_phoenix, "~> 2.0"}
     ]
   end
 
